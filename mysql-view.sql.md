@@ -2,7 +2,10 @@
 ## Alter Table
 #
 ### Create table
-<details>
+<details><summary>Click to expand!</summary>
+    
+>
+
     -- meg_cps.log_db_record_v2 definition
     CREATE TABLE `log_db_record_v2` (
         `id` int NOT NULL AUTO_INCREMENT,
@@ -24,6 +27,7 @@
         KEY `log_db_record_v2_logfile_IDX` (`logfile`,`thread`,`linenum`) USING BTREE
     ) ENGINE=InnoDB AUTO_INCREMENT=37117 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
     ;
+    
 </details>
 
 
@@ -37,13 +41,10 @@
     from meg_cps.meg_log t
     where t.req_id is not NULL and t.req_guess is NULL
     ;
-
     CREATE OR REPLACE VIEW REQ_SERVER_RES AS
-    -- [id: 0xe5a4e95b, L:/172.17.4.10:50376 - R:proxy.itc.in/10.13.0.32:8080]
-    -- [Androidbee6635c4f0bb674-1819146]
     -- Complete Response from SERVER received for Request 
-    -- Host: secure.yatra.com, 
-    -- Referer: https://secure.yatra.com/
+    -- Host: my.vm.com 
+    -- Referer: https://abs.com
     --  Response Code [200], 
     -- Bytes Received [9978]
     SELECT 
